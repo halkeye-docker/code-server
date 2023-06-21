@@ -27,6 +27,8 @@ RUN \
 
 # Install ASDF to install custom tools
 ARG ASDF_VERSION=0.11.3
+ENV ASDF_DIR=/asdf
+ENV ASDF_DATA_DIR=/asdf
 RUN bash -c "git clone https://github.com/asdf-vm/asdf.git /asdf --branch v${ASDF_VERSION} && \
   echo 'legacy_version_file = yes' > $HOME/.asdfrc && \
   printf 'yarn\njsonlint' > $HOME/.default-npm-packages && \
