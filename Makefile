@@ -1,7 +1,7 @@
 #!make
 .DEFAULT_GOAL := build
 
-REGISTRY := jenkins
+REGISTRY := halkeye
 NAME := code-server
 VERSION := latest
 NAME_VERSION := $(NAME):$(VERSION)

@@ -40,6 +40,11 @@ RUN bash -c "git clone https://github.com/asdf-vm/asdf.git /asdf --branch v${ASD
   asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git && \
   asdf install nodejs 18.15.0 && \
   asdf global nodejs 18.15.0 && \
+  asdf plugin-add direnv && \
+  asdf direnv setup --shell zsh --version latest && \
+  asdf plugin-add maven && \
+  asdf install maven 3.9.2 && \
+  asdf global maven 3.9.2 && \
   asdf plugin add java https://github.com/halcyon/asdf-java.git && \
   asdf install java zulu-17.42.19 && \
   asdf global java zulu-17.42.19"
