@@ -12,6 +12,7 @@ RUN \
   build-essential \
   jq \
   zip \
+  unzip \
   # python
   python3 \
   python3-pip \
