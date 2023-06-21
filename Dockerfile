@@ -27,10 +27,10 @@ RUN \
 
 # Install ASDF to install custom tools
 ARG ASDF_VERSION=0.11.3
-RUN bash -c "git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v${ASDF_VERSION} && \
+RUN bash -c "git clone https://github.com/asdf-vm/asdf.git /asdf --branch v${ASDF_VERSION} && \
   echo 'legacy_version_file = yes' > $HOME/.asdfrc && \
   printf 'yarn\njsonlint' > $HOME/.default-npm-packages && \
-  . $HOME/.asdf/asdf.sh && \
+  . /asdf/asdf.sh && \
   asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git && \
   asdf install ruby 3.2.2 && \
   asdf global ruby 3.2.2 && \

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. $HOME/.asdf/asdf.sh
+. /asdf/asdf.sh
 
 exec /init "$@"
